@@ -1,5 +1,66 @@
-body {
-  background-color: #2b2b2b;
-  color: white;
-  font-family: sans-serif;
+/* 1. O RESET: Removemos as margens padrão feias do navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+/* 2. O CORPO (Palco): Aqui acontece a mágica do Flexbox */
+body {
+  background-color: #121214; /* Fundo bem escuro (estilo Matrix/Dev) */
+  color: #e1e1e6; /* Texto quase branco (para não cansar a vista) */
+  font-family: sans-serif;
+  
+  /* Flexbox: O segredo da centralização */
+  display: flex;
+  justify-content: center; /* Alinha na horizontal (eixo X) */
+  align-items: center;     /* Alinha na vertical (eixo Y) */
+  min-height: 100vh;       /* Força o corpo a ter 100% da altura da tela */
+}
+
+/* 3. O CARTÃO (Ator principal) */
+.cartao {
+  background-color: #202024; /* Um cinza um pouco mais claro para destacar */
+  padding: 32px;             /* Espaço interno para o texto não colar na borda */
+  border-radius: 8px;        /* Bordas arredondadas */
+  text-align: center;        /* Centraliza o texto DENTRO do cartão */
+  width: 300px;              /* Largura fixa do cartão */
+  border: 1px solid #323238; /* Uma borda sutil */
+}
+
+/* 4. A FOTO */
+img {
+  width: 120px;       /* Tamanho da foto */
+  border-radius: 50%; /* Transforma o quadrado em círculo perfeito */
+  border: 2px solid #00B37E; /* Borda verde neon (cor de dev) */
+  margin-bottom: 20px; /* Empurra o nome para baixo */
+}
+
+/* 5. A LISTA (O container dos botões) */
+.lista-links {
+  list-style: none; /* O comando mágico que TIRA as bolinhas */
+  margin-top: 20px; /* Dá um respiro entre o texto e os botões */
+}
+
+/* 6. O ESTILO DO BOTÃO */
+.lista-links a {
+  display: block;   /* Faz o link ocupar a linha inteira (vira um bloco) */
+  background-color: #323238; /* Fundo do botão */
+  color: #e1e1e6;            /* Cor do texto */
+  text-decoration: none;     /* Tira o sublinhado feio do link */
+  
+  padding: 12px;             /* "Gordurinha" interna para o botão ficar maior */
+  margin-bottom: 12px;       /* Empurra o próximo botão para baixo */
+  border-radius: 4px;        /* Cantos arredondados */
+  font-weight: bold;         /* Texto em negrito */
+  
+  transition: background 0.3s; /* Prepara uma animação suave de 0.3 segundos */
+}
+
+/* 7. O EFEITO HOVER (Quando o mouse passa por cima) */
+.lista-links a:hover {
+  background-color: #00B37E; /* Troca para verde neon */
+  color: #ffffff;            /* Texto fica branco puro */
+  transform: scale(1.05);    /* Aumenta levemente o botão (efeito pop) */
+}
+
