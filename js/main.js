@@ -13,7 +13,7 @@ const cores = [
 ];
 
 /* 3. A FUNÇÃO DE MUDANÇA
-   Criamos uma função que sorteia um número e troca a borda */
+   função que sorteia um número e troca a borda */
 function mudarCorBorda() {
   // Sorteia um número entre 0 e o tamanho da lista de cores
   const numeroAleatorio = Math.floor(Math.random() * cores.length);
